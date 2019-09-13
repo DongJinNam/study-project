@@ -17,9 +17,9 @@
 ### Example(REST vs GraphQL)
 
 * REST
-  * /users/<id>
-  * /users/<post>
-  * /users/<followers>
+  * /users/id
+  * /users/post
+  * /users/followers
   * 3개의 요청에 대한 API를 각각 개발해야 함.
 * GraphQL
   * 3개의 요청을 한번의 API로 제공 가능
