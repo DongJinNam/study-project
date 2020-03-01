@@ -1,0 +1,26 @@
+version: "3"
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.0
+    container_name: es
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+  web:
+    # image: ehdwls6856/foodtrucks-web
+    build: . 
+    command: python app.py
+    environment:
+      - DEBUG=True
+    depends_on:
+      - es
+    ports:
+      - 5000:5000
+    volumes:
+      - ./flask-app:/opt/flask-app
+volumes:
+    esdata1:
+      driver: local
