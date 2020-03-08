@@ -1,0 +1,13 @@
+Name:         admin-user-token-5hhlx
+Namespace:    kubernetes-dashboard
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: admin-user
+              kubernetes.io/service-account.uid: 2a3dc0cb-6f2c-4c36-9371-60f93315492f
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1025 bytes
+namespace:  20 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLTVoaGx4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyYTNkYzBjYi02ZjJjLTRjMzYtOTM3MS02MGY5MzMxNTQ5MmYiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.tRfRzkdFVBb0Kv8KRavua3BCfz84Y1WKpw58Q0Fe9iYIuBXOROW0HFaHTb96tYjLKyTlpQvyYoHtXcZWGz2mQpSOoEhNe-J4RCRNotQEUn2Ew0owJK-MLISCANMTcdr0C5MOPEz0FvTUrWYQ_E2-_jBJTxhvkDJXTUyIOQvipQRGLXRkACA7q02rqCw0_8kKar5gO1jd_sL7K5L5sEJgefV46fw_nl-Y5qGlDjGu25xh74X59afRrsscWv9y-jgUy0LfbsFBW-358U4NUWZzs8sXuJFouSO3a5uC7WMz44FR3kuATDEuePmGTnPwXOLulLfPmqrnb3CZ7OclqwaMVw
