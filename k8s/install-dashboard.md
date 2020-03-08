@@ -79,4 +79,4 @@ Dashboard 접속을 위한 **토큰 생성**(Windows 10 Powershell)
 
 로그인 성공 시. 기본적으로 아래와 같이 뜨게 된다.
 
-![k8s-dashboard-overview](./study-project/k8s/k8s-dashboard-overview.PNG)
+![k8s-dashboard-overview](https://github.com/DongJinNam/study-project/blob/master/k8s/k8s-dashboard-overview.PNG)
