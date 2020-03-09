@@ -29,7 +29,7 @@ kong api gateway 학습을 위한 Repository 입니다.
    ```sh
    $ docker run -d --name kong-database \
      --network kong-net \
-     -p 5555:5432 \
+     -p 5432:5432 \
      -e "POSTGRES_USER=kong" \
      -e "POSTGRES_DB=kong" \
      -e "POSTGRES_PASSWORD=kong" \
@@ -85,7 +85,17 @@ kong api gateway 학습을 위한 Repository 입니다.
    docker run -d --name kong --network=kong-net -e "KONG_DATABASE=postgres" -e "KONG_PG_HOST=kong-database" -e "KONG_PG_PASSWORD=kong" -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" -e "KONG_PROXY_ERROR_LOG=/dev/stderr" -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" -e "KONG_ADMIN_LISTEN=0.0.0.0:8001, 0.0.0.0:8444 ssl" -p 8000:8000 -p 8443:8443 -p 8001:8001 -p 8444:8444 kong:latest
    ```
 
+5. kong dashboard 설치
+
+   ```powershell
+   docker run -d -p 8080:8080 pgbi/kong-dashboard npm start -- -a user=password
+   ```
+
    
+
+
+
+
 
 Kong Instance 구축 후, 예시로 사용할 API 서버를 아래와 같이 설정
 
