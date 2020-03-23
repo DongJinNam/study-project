@@ -36,7 +36,6 @@
   * 시큐리티 그룹 : Instance 단위 FIrewall
     * 주로 시큐리티 그룹을 즐겨 사용
   * DNS 호스트 이름/편집
-
 * how to comm outside
   * vpc 에 `internet gateway` attach
   * **인터넷 게이트웨이 생성 후, VPC Attach 필수**
@@ -53,17 +52,14 @@
   * 서브넷 내 ec2 생성 후 ssh 22 포트만 허용
   * ssh 전용 ec2가 포함된 subnet(`Bastion Host`) 생성 후, 이를 통해 다른 인프라에 접근 허용해야 함.
     * 요약하자면, 다른 호스트에 접근하기 위한 proxy subnet
-
 * 4 subnet
   * 1 bastion host
   * 3 subnet
     * apache
       * bastion host -> apache
       * igw -> apache
-
 * public vs private
   * routing 테이블이 igw 를 포함하는지 안하는지로 구분
-
 * bastion host 생성
   * 가용존 선택
   * subnet-apne2c-dev-ssh
@@ -77,7 +73,9 @@
 * instance 에 대해서 azure 는 shutdown 시켜도 과금되지만, aws는 그렇지 않음
   * 같은 AZ 내에서 다른 Subnet 에 통신 시 과금이 안 될 수 있음(`상품에 따라 다름`)
   * 다른 AZ 내에서 Subnet 통신 시에는 과금됨
-
+* Internet Gateway 생성
+  * name : igw-apne2-dev
+  * **vpc 연결 필수**
 * 서브넷 생성
   * ipv4 cidr 블록은 VPC CIDR 를 범위 내에서 만들어야함.
     * vpc cidr : 10.1.0.0/16
@@ -87,6 +85,9 @@
 * 라우팅 테이블
   * name : rt-apne2-dev-ssh
   * subnet 연결
+  * **외부 -> 인터넷 게이트웨이**
+    * From 대상 : 0.0.0.0/0
+    * To 대상 : 생성한 internet gateway(igw-apne2-dev)
 * EC2 생성
   * management console - ec2
   * key pair 생성 -> **파일 다운로드 필수!!**
